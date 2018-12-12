@@ -1,4 +1,4 @@
-#### isKnownUniquelyReferenced
+### [isKnownUniquelyReferenced](https://developer.apple.com/documentation/swift/2429905-isknownuniquelyreferenced)
 `Swift`官方文档中推荐开发者在实现比较大的数据结构时实现写时复制语义
 
 `Swift`标准库提供可一个函数`isKnownUniquelyReferenced`，用来检查某个实例是不是唯一的引用，如果是，说明该实例没有被共享，我们可以直接修改当前的实例，如果不是，说明实例被共享，这时对它进行更改就需要先复制
