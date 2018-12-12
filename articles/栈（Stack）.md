@@ -1,6 +1,9 @@
 ## 栈（Stack）
 栈是一种“后进先出（`Last In First Out`）”的数据结构，简称`(LIFO)`。与链表和数组一样，栈的数据也是线性排列，但在栈中，添加和删除数据的操作只能在一端进行，访问数据也只能访问到顶端的数据。想要访问中间的数据时，就必须通过出栈操作将目标数据移到栈顶才行。
 
+![](../images/stack-1.png)
+![](../images/stack-2.png)
+
 ```Swift
 struct Stack<Element> {
     private var elements: [Element] = []
