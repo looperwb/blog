@@ -22,3 +22,36 @@ struct PaintingPlan {
   }
 }
 ```
+
+属性监听
+
+```Swift
+// Data Binding
+class Box<T> {
+    typealias Listener = (T) -> Void
+    var listener: Listener?
+    
+    var value: T {
+        didSet {
+            listener?(value)
+        }
+    }
+    
+    init(_ value: T) {
+        self.value = value
+    }
+    
+    func bind(listener: Listener?) {
+        self.listener = listener
+        listener?(value)
+    }
+}
+
+let code: Box<String?> = Box(nil)
+
+code.value = "right code"
+
+code.bind {
+    print($0 ?? "")
+}
+```
